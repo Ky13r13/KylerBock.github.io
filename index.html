@@ -3,10 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kyler Bock| Engineering Portfolio</title>
+  <title>Kyler Bock | Engineering Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-950 text-white font-sans">
+<body class="bg-gray-950 text-white font-sans pt-16">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-gray-950 border-b border-gray-800 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-lg font-bold hover:text-blue-400 transition">Kyler Bock</a>
+      <ul class="hidden md:flex gap-8 text-gray-400">
+        <li><a href="#projects" class="hover:text-white transition">Projects</a></li>
+        <li><a href="#resume" class="hover:text-white transition">Resume</a></li>
+        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
+        <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-950 px-6 pb-4 flex flex-col gap-4 text-gray-400">
+      <a href="#projects" class="hover:text-white transition">Projects</a>
+      <a href="#resume" class="hover:text-white transition">Resume</a>
+      <a href="#contact" class="hover:text-white transition">Contact</a>
+    </div>
+  </nav>
 
   <!-- Hero -->
   <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
@@ -16,66 +41,82 @@
       View My Work
     </a>
   </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-5xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-gray-800 rounded-xl p-6">
+        <h3 class="text-xl font-semibold mb-2">Capacitance Bank + ML Algorithms</h3>
+        <p class="text-gray-400 mb-4">Exploration into capacitance discharge curves, with the goal of reverse engineering the capacitance of a circuit through predictive algorithms trained on discharge curves.</p>
+        <a href="#" class="text-blue-400 hover:underline">View Project →</a>
+      </div>
+      <div class="bg-gray-800 rounded-xl p-6">
+        <h3 class="text-xl font-semibold mb-2">IMU Based Platform Stabilization</h3>
+        <p class="text-gray-400 mb-4">A platform stabilization system using an Inertial Measurement Unit to detect orientation and correct position in real time.</p>
+        <a href="#" class="text-blue-400 hover:underline">View Project →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Resume -->
-  <section class="text-center py-20 px-6">
+  <section id="resume" class="text-center py-20 px-6">
     <h2 class="text-3xl font-bold mb-4">Resume</h2>
     <p class="text-gray-400 mb-6">View or download my latest resume.</p>
     <a href="KylerBockResume.pdf" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg">
       View Resume
     </a>
   </section>
-  <!-- Projects -->
-  <section id="projects" class="max-w-5xl mx-auto px-6 py-20">
-    <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Repeat this card for each project -->
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-3xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+    <p class="text-gray-400 mb-10">Feel free to reach out for opportunities, collaborations, or just to connect.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="bg-gray-800 rounded-xl p-6">
-        <h3 class="text-xl font-semibold mb-2">Capacitance Bank + ML Algorithms</h3>
-        <p class="text-gray-400 mb-4">Exploration into capacitance discharge curves, with the goal of reverse engnineering the capacitance of circuit through predictive algorithms trained on discharge curves</p>
-        <a href="#" class="text-blue-400 hover:underline">View Project →</a>
+        <p class="text-2xl mb-3">✉️</p>
+        <h3 class="font-semibold mb-2">Email</h3>
+        <a href="mailto:kyler.bock26@gmail.com" class="text-blue-400 hover:underline text-sm">
+          kyler.bock26@gmail.com
+        </a>
       </div>
       <div class="bg-gray-800 rounded-xl p-6">
-        <h3 class="text-xl font-semibold mb-2">IMU Based Platform Stabilization</h3>
-        <p class="text-gray-400 mb-4">Exploration into capacitance discharge curves, with the goal of reverse engnineering the capacitance of circuit through predictive algorithms trained on discharge curves</p>
-        <a href="#" class="text-blue-400 hover:underline">View Project →</a>
+        <p class="text-2xl mb-3">💼</p>
+        <h3 class="font-semibold mb-2">LinkedIn</h3>
+        <a href="https://www.linkedin.com/in/kyler-b-2bb276214/" target="_blank" class="text-blue-400 hover:underline text-sm">
+          linkedin.com/in/kylerbock
+        </a>
+      </div>
+      <div class="bg-gray-800 rounded-xl p-6">
+        <p class="text-2xl mb-3">🐙</p>
+        <h3 class="font-semibold mb-2">GitHub</h3>
+        <a href="https://github.com/Ky13r13" target="_blank" class="text-blue-400 hover:underline text-sm">
+          github.com/Ky13r13
+        </a>
       </div>
     </div>
   </section>
-<!-- Contact -->
-<section id="contact" class="max-w-3xl mx-auto px-6 py-20 text-center">
-  <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
-  <p class="text-gray-400 mb-10">Feel free to reach out for opportunities, collaborations, or just to connect.</p>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    
-    <!-- Email -->
-    <div class="bg-gray-800 rounded-xl p-6">
-      <p class="text-2xl mb-3">✉️</p>
-      <h3 class="font-semibold mb-2">Email</h3>
-      <a href="mailto:kyler.bock26@gmail.com" class="text-blue-400 hover:underline text-sm">
-        kyler.bock26@gmail.com
-      </a>
-    </div>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
 
-    <!-- LinkedIn -->
-    <div class="bg-gray-800 rounded-xl p-6">
-      <p class="text-2xl mb-3">💼</p>
-      <h3 class="font-semibold mb-2">LinkedIn</h3>
-      <a href="https://www.linkedin.com/in/kyler-b-2bb276214/" target="_blank" class="text-blue-400 hover:underline text-sm">
-        linkedin.com/in/kylerbock
-      </a>
-    </div>
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+    });
 
-    <!-- GitHub -->
-    <div class="bg-gray-800 rounded-xl p-6">
-      <p class="text-2xl mb-3">🐙</p>
-      <h3 class="font-semibold mb-2">GitHub</h3>
-      <a href="https://github.com/Ky13r13" target="_blank" class="text-blue-400 hover:underline text-sm">
-        github.com/ky13r13
-      </a>
-    </div>
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
+    });
+  </script>
 
-  </div>
-</section>
 </body>
 </html>
