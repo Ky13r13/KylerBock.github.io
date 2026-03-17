@@ -3,7 +3,7 @@
 Mechanical Engineering + Physics student, always working on being better than yesterday.
 
 
-**Live Portfolio:** https://KylerBock.github.io
+**Live Portfolio:** https://ky13r13.github.io/KylerBock.github.io/
 
 
 # Portfolio To-Do
